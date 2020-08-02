@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   public faBarsIcon = faBars;
   public username = 'Miguel';
 
-  @Output() clickOnHambuergerEvent = new EventEmitter<string>();
+  @Output() clickOnHamburgerEvent = new EventEmitter<string>();
 
   constructor(translate: TranslateService) { }
 
@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   }
 
   handlerClickHamburger(): void {
-    this.clickOnHambuergerEvent.emit('clickOnHambuergerEvent');
+    this.clickOnHamburgerEvent.emit('clickOnHamburgerEvent');
   }
 
 }

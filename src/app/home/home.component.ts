@@ -19,7 +19,14 @@ export class HomeComponent implements OnInit {
     this.showSidebar = !this.isMobile;
   }
 
-  handleToggleSidebar(): void {
-    this.showSidebar = !this.showSidebar;
+  handleToggleSidebar(event: string): void {
+    switch (event) {
+      case 'clickOnHamburgerEvent':
+        this.showSidebar = !this.showSidebar;
+        break;
+      default:
+        this.showSidebar = false;
+        break;
+    }
   }
 }

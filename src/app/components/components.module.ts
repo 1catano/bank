@@ -5,11 +5,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsContainerComponent } from './products-container/products-container.component';
 import { HeaderComponent } from './header/header.component';
+import { ProductsCardComponent } from './products-card/products-card.component';
 
 
 
 @NgModule({
-  declarations: [SidebarComponent, FooterComponent, ProductsContainerComponent, HeaderComponent],
+  declarations: [SidebarComponent, FooterComponent, ProductsContainerComponent, HeaderComponent, ProductsCardComponent],
   imports: [
     CommonModule,
     SharedModule

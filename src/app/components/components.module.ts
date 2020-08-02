@@ -8,7 +8,6 @@ import { HeaderComponent } from './header/header.component';
 import { ProductsCardComponent } from './products-card/products-card.component';
 
 
-
 @NgModule({
   declarations: [SidebarComponent, FooterComponent, ProductsContainerComponent, HeaderComponent, ProductsCardComponent],
   imports: [

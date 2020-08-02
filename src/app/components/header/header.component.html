@@ -2,10 +2,63 @@
     <div class="bank-header__hamburger" (click)="handlerClickHamburger(); $event.stopPropagation()">
         <fa-icon [icon]="faBarsIcon"></fa-icon>
     </div>
-    <p class="bank-header__username">
-        {{ 'header.greeting' | translate:{'name': username} }}
-    </p>
+    <div>
+        <p class="bank-header__username">
+            {{ 'header.greeting' | translate:{'name': username} }}
+        </p>
+    </div>
     <div class="bank-header-options">
+        <div class="bank-header-options__opt">
+            <label class="bank-header-options__label">
+                {{"header.profile" | translate}}
+            </label>
+            <div class="bank-header-options__opt-icon" (click)="handleClickProfile(); $event.stopPropagation()">
+                <fa-icon [icon]="faUserCircleIcon" size="2x"></fa-icon>
+                <div class="bank-header-options__opt-icon__chield">
+                    <fa-icon [icon]="faSortDownIcon"></fa-icon>
+                </div>
+            </div>
+        </div>
+        <div class="bank-header-options__opt bank-header-options__opt--only-desktop">
+            <label class="bank-header-options__label">
+                {{"header.alerts" | translate}}
+            </label>
+            <div class="bank-header-options__opt-icon">
+                <fa-icon [icon]="faBellIcon" size="2x"></fa-icon>
+            </div>
+        </div>
+        <div class="bank-header-options__opt bank-header-options__opt--only-desktop">
+            <label class="bank-header-options__label">
+                {{"header.logout" | translate}}
+            </label>
+            <div class="bank-header-options__opt-icon">
+                <fa-icon [icon]="faSignOutAltIcon" size="2x"></fa-icon>
+            </div>
+        </div>
+    </div>
 
+    <div class="bank-header__profile-menu-container" *ngIf="showProfileMenu">
+        <ul class="bank-header__profile-menu">
+            <li class="bank-header-options__opt__list-item">
+                <div class="bank-header-options__opt bank-header-options__opt--in-menu">
+                    <label class="bank-header-options__label bank-header-options__label--show">
+                        {{"header.alerts" | translate}}
+                    </label>
+                    <div class="bank-header-options__opt-icon">
+                        <fa-icon [icon]="faBellIcon" size="2x"></fa-icon>
+                    </div>
+                </div>
+            </li>
+            <li class="bank-header-options__opt__list-item">
+                <div class="bank-header-options__opt bank-header-options__opt--in-menu">
+                    <label class="bank-header-options__label bank-header-options__label--show">
+                        {{"header.logout" | translate}}
+                    </label>
+                    <div class="bank-header-options__opt-icon">
+                        <fa-icon [icon]="faSignOutAltIcon" size="2x"></fa-icon>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </header>

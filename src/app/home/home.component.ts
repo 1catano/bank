@@ -10,16 +10,23 @@ import { faBoxTissue } from '@fortawesome/free-solid-svg-icons';
 export class HomeComponent implements OnInit {
 
   public showSidebar: boolean;
-  public isDesktopDevice: boolean;
+  public isMobile = true;
 
   constructor(private deviceService: DeviceDetectorService) { }
 
   ngOnInit(): void {
-    this.isDesktopDevice = this.deviceService.isDesktop();
-    this.showSidebar = this.isDesktopDevice ? true : false;
+    this.isMobile = this.deviceService.isMobile();
+    this.showSidebar = !this.isMobile;
   }
 
-  handleToggleSidebar(): void {
-    this.showSidebar = !this.showSidebar;
+  handleToggleSidebar(event: string): void {
+    switch (event) {
+      case 'clickOnHamburgerEvent':
+        this.showSidebar = !this.showSidebar;
+        break;
+      default:
+        this.showSidebar = false;
+        break;
+    }
   }
 }

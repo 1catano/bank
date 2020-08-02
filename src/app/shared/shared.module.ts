@@ -21,7 +21,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateLoader {
     FontAwesomeModule,
     DeviceDetectorModule,
     TranslateModule.forRoot({
-      defaultLanguage: 'es',
+      defaultLanguage: 'en',
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,

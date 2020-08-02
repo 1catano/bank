@@ -1,6 +1,10 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ElementRef, HostListener } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faSortDown } from '@fortawesome/free-solid-svg-icons';
+import { faBell } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -9,17 +13,32 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class HeaderComponent implements OnInit {
   public faBarsIcon = faBars;
+  public faUserCircleIcon = faUserCircle;
+  public faSortDownIcon = faSortDown;
+  public faBellIcon = faBell;
+  public faSignOutAltIcon = faSignOutAlt;
+  public showProfileMenu = false;
   public username = 'Miguel';
 
-  @Output() clickOnHambuergerEvent = new EventEmitter<string>();
+  @Output() clickOnHamburgerEvent = new EventEmitter<string>();
 
-  constructor(translate: TranslateService) { }
+  constructor(translate: TranslateService, private eRef: ElementRef) { }
 
   ngOnInit(): void {
   }
 
   handlerClickHamburger(): void {
-    this.clickOnHambuergerEvent.emit('clickOnHambuergerEvent');
+    this.clickOnHamburgerEvent.emit('clickOnHamburgerEvent');
+    this.showProfileMenu = this.showProfileMenu ? !this.showProfileMenu : this.showProfileMenu;
   }
 
+  @HostListener('document:click', ['$event'])
+  clickout(): void {
+    this.showProfileMenu = this.showProfileMenu ? !this.showProfileMenu : this.showProfileMenu;
+  }
+
+  handleClickProfile(): void {
+    this.showProfileMenu = !this.showProfileMenu;
+    this.clickOnHamburgerEvent.emit('clickOnProfile');
+  }
 }

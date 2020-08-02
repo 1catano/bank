@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   handleToggleSidebar(event: string): void {
     switch (event) {
-      case "clickOnHamburgerEvent":
+      case 'clickOnHamburgerEvent':
         this.showSidebar = !this.showSidebar;
         break;
       default:

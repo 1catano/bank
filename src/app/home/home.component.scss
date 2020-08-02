@@ -1,0 +1,25 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variables.scss";
+
+.bank-home {
+    flex-direction: row;
+
+    &__main {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        width: 100%;
+
+        @include desktop {
+            padding: 0 #{$space-big-1};
+        }
+
+        @include widescreen {
+            padding: 0 #{$space-big-2};
+        }
+
+        @include fullhd {
+            padding: 0 #{$space-big-4};
+        }
+    }
+}

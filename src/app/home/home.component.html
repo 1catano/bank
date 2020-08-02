@@ -1,0 +1,13 @@
+<section class="bank-home app-container">
+    <app-sidebar [(showSidebar)]="showSidebar" [isDesktopDevice]="isDesktopDevice"></app-sidebar>
+    <div class="bank-home__main">
+        <app-header (clickOnHambuergerEvent)="handleToggleSidebar()">
+
+        </app-header>
+
+
+        <app-products-container>
+
+        </app-products-container>
+    </div>
+</section>

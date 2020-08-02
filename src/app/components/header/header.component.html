@@ -1,0 +1,11 @@
+<header class="bank-header app-container">
+    <div class="bank-header__hamburger" (click)="handlerClickHamburger(); $event.stopPropagation()">
+        <fa-icon [icon]="faBarsIcon"></fa-icon>
+    </div>
+    <p class="bank-header__username">
+        {{ 'header.greeting' | translate:{'name': username} }}
+    </p>
+    <div class="bank-header-options">
+
+    </div>
+</header>

@@ -1,0 +1,21 @@
+<aside class="bank-sidebar" [ngClass]="{'bank-sidebar--hidden' : !showSidebar }">
+    <div class="bank-sidebar__brand">
+        <div class="bank-sidebar__brand__logo">
+        </div>
+        <p class="bank-sidebar__brand__name">
+            Epika Bank
+        </p>
+    </div>
+    <nav>
+        <ul class="bank-sidebar__nav-menu">
+            <li *ngFor="let option of menuOptions"
+                [ngClass]="{'bank-sidebar__nav-menu__option--selected' : option.id === selectedOption }"
+                class="bank-sidebar__nav-menu__option" (click)="handleClick(option.id)">
+                {{option.label | translate}}
+                <label class="bank-sidebar__nav-menu__option__label" *ngIf="option.isNew">
+                    {{"sidebar.options.new" | translate}}
+                </label>
+            </li>
+        </ul>
+    </nav>
+</aside>

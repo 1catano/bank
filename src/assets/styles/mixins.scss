@@ -1,0 +1,31 @@
+@import "./variables.scss";
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin all-desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) and (max-width: #{$widescreen-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin widescreen {
+    @media (min-width: #{$widescreen-width}) and (max-width: #{$fullhd-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin fullhd {
+    @media (min-width: #{$fullhd-width}) {
+        @content;
+    }
+}

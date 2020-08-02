@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+
+@charset 'utf-8';
+@import "../node_modules/normalize.css/normalize.css";
+@import "./assets/styles/fonts.scss";
+@import "./assets/styles/layout.scss";
+@import "./assets/styles/reset.scss";
+
+$body-fonts: 'Open Sans', sans-serif;
+
+body {
+  font-family: $body-fonts;
+  font-weight: normal;
+  height: 100vh;
+}

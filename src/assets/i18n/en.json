@@ -1,0 +1,19 @@
+{
+    "header": {
+        "alerts": "Alerts",
+        "greeting": "Good morning, {{name}}",
+        "logout": "Safe logout",
+        "profile": "Profile"
+    },
+    "sidebar": {
+        "options": {
+            "your_products": "YOUR PRODUCTS",
+            "your_scheduler": "YOUR SCHEDULER",
+            "payments": "PAYMENTS",
+            "transfers": "TRANSFERS",
+            "certificates": "CERTIFICATES",
+            "security": "SECURITY",
+            "new": "¡NEW!"
+        }
+    }
+}

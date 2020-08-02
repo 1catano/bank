@@ -1,0 +1,19 @@
+{
+    "header": {
+        "alerts": "Alertas",
+        "greeting": "Buenos días, {{name}}",
+        "logout": "Salida segura",
+        "profile": "Perfil"
+    },
+    "sidebar": {
+        "options": {
+            "your_products": "TUS PRODUCTOS",
+            "your_scheduler": "TU ORGANIZADOR",
+            "payments": "PAGOS",
+            "transfers": "TRANSFERENCIAS",
+            "certificates": "CERTIFICADOS",
+            "security": "SEGURIDAD",
+            "new": "¡Nuevo!"
+        }
+    }
+}

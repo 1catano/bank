@@ -29,6 +29,7 @@ export class HeaderComponent implements OnInit {
 
   handlerClickHamburger(): void {
     this.clickOnHamburgerEvent.emit('clickOnHamburgerEvent');
+    this.showProfileMenu = this.showProfileMenu ? !this.showProfileMenu : this.showProfileMenu;
   }
 
   @HostListener('document:click', ['$event'])
@@ -38,5 +39,6 @@ export class HeaderComponent implements OnInit {
 
   handleClickProfile(): void {
     this.showProfileMenu = !this.showProfileMenu;
+    this.clickOnHamburgerEvent.emit('clickOnProfile');
   }
 }

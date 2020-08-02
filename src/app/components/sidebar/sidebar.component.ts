@@ -42,7 +42,7 @@ export class SidebarComponent implements OnInit {
   ];
 
   @Output() showSidebarChange = new EventEmitter();
-  @Input() isDesktopDevice: boolean;
+  @Input() isMobile: boolean;
   @Input()
   get showSidebar(): boolean {
     return this.showSidebarValue;
@@ -61,7 +61,7 @@ export class SidebarComponent implements OnInit {
 
   @HostListener('document:click', ['$event'])
   clickout(event): void {
-    if ((!this.eRef.nativeElement.contains(event.target) && this.showSidebar) && !this.isDesktopDevice) {
+    if ((!this.eRef.nativeElement.contains(event.target) && this.showSidebar) && this.isMobile) {
       this.showSidebar = !this.showSidebar;
     }
   }

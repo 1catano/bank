@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { SidebarComponent } from './sidebar.component';
 
@@ -8,7 +9,10 @@ describe('SidebarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SidebarComponent ]
+      declarations: [ SidebarComponent ],
+      imports: [
+        TranslateModule.forRoot(),
+      ],
     })
     .compileComponents();
   }));

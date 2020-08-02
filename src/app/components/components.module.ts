@@ -7,7 +7,6 @@ import { ProductsContainerComponent } from './products-container/products-contai
 import { HeaderComponent } from './header/header.component';
 
 
-
 @NgModule({
   declarations: [SidebarComponent, FooterComponent, ProductsContainerComponent, HeaderComponent],
   imports: [

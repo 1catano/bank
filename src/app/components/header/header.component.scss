@@ -1,6 +1,10 @@
 @import "../../../assets/styles/variables.scss";
 @import "../../../assets/styles/mixins.scss";
 
+:host {
+    margin-bottom: $space-medium-2;
+}
+
 .bank-header {
     align-items: center;
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
@@ -8,11 +12,14 @@
     flex-direction: row;
     height: $header-height;
     padding: 0 #{$space-small};
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     @include all-desktop {
         box-shadow: none;
-        justify-content: space-between;
+    }
+
+    @include tablet {
+        padding: 0 #{$space-medium-2};
     }
 
     @include all-desktop {
@@ -48,6 +55,7 @@
         right: 0;
         top: $header-height;
         width: 140px;
+        z-index: 1;
 
         @include all-desktop {
             display: none;
@@ -108,6 +116,7 @@
             border-radius: inherit;
             box-shadow: none;
             flex-direction: row;
+            justify-content: space-evenly;
             padding-right: #{$space-medium-1};
             width: 100%;
         }

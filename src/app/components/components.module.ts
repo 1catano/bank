@@ -6,14 +6,16 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductsContainerComponent } from './products-container/products-container.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductsCardComponent } from './products-card/products-card.component';
+import { InfoBarComponent } from './info-bar/info-bar.component';
 
+const components = [SidebarComponent, FooterComponent, ProductsContainerComponent, HeaderComponent, ProductsCardComponent, InfoBarComponent];
 
 @NgModule({
-  declarations: [SidebarComponent, FooterComponent, ProductsContainerComponent, HeaderComponent, ProductsCardComponent],
+  declarations: [...components],
   imports: [
     CommonModule,
     SharedModule
   ],
-  exports: [SidebarComponent, FooterComponent, ProductsContainerComponent, HeaderComponent ]
+  exports: [...components]
 })
 export class ComponentsModule { }

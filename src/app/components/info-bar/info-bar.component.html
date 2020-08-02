@@ -1,0 +1,48 @@
+<div class="bank-info-bar">
+    <div class="bank-info-bar__head">
+        <label class="bank-info-bar__head__label">
+            {{ 'info-bar.head-label' | translate }}
+        </label>
+
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div class="bank-info-bar__slide">
+        <div class="bank-info-bar__slide__message">
+            <p class="bank-info-bar__slide__message__text">
+                {{ 'info-bar.your-finance' | translate }}
+            </p>
+        </div>
+        <div class="bank-info-bar__slide__data">
+            <span class="">
+                <fa-icon [icon]="faAngleLeftIcon" size="2x"></fa-icon>
+            </span>
+            <div class="bank-info-bar__slide__data-content">
+                <p class="bank-info-bar__slide__data-content__text">
+                    {{ 'info-bar.financial-savings-msg' | translate }}
+                </p>
+                <div class="bank-info-bar__slide__data-content__value-container">
+                    <p class="bank-info-bar__slide__data-content__value">
+                        $ 2.351.000,00
+                    </p>
+                    <div class="bank-info-bar__slide__data-content__value-indicator">
+                        <span class="bank-info-bar__slide__circle bank-info-bar__slide__circle--selected">
+
+                        </span>
+                        <span class="bank-info-bar__slide__circle">
+
+                        </span>
+                        <span class="bank-info-bar__slide__circle">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <span class="">
+                <fa-icon [icon]="faAngleRightIcon" size="2x"></fa-icon>
+            </span>
+        </div>
+    </div>
+</div>

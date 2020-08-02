@@ -36,7 +36,6 @@
             </div>
         </div>
     </div>
-
     <div class="bank-header__profile-menu-container" *ngIf="showProfileMenu">
         <ul class="bank-header__profile-menu">
             <li class="bank-header-options__opt__list-item">
@@ -45,7 +44,7 @@
                         {{"header.alerts" | translate}}
                     </label>
                     <div class="bank-header-options__opt-icon">
-                        <fa-icon [icon]="faBellIcon" size="2x"></fa-icon>
+                        <fa-icon [icon]="faBellIcon"></fa-icon>
                     </div>
                 </div>
             </li>
@@ -55,7 +54,7 @@
                         {{"header.logout" | translate}}
                     </label>
                     <div class="bank-header-options__opt-icon">
-                        <fa-icon [icon]="faSignOutAltIcon" size="2x"></fa-icon>
+                        <fa-icon [icon]="faSignOutAltIcon"></fa-icon>
                     </div>
                 </div>
             </li>

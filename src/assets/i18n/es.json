@@ -5,6 +5,11 @@
         "logout": "Salida segura",
         "profile": "Perfil"
     },
+    "info-bar": {
+        "head-label": "Mostrar otros productos",
+        "your-finance": "¿Cómo se ven tus finanzas?",
+        "financial-savings-msg": "En productos de ahorro tienes:"
+    },
     "sidebar": {
         "options": {
             "your_products": "TUS PRODUCTOS",

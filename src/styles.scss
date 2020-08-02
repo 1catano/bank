@@ -1,9 +1,11 @@
 
 @charset 'utf-8';
 @import "../node_modules/normalize.css/normalize.css";
+@import "./assets/styles/reset.scss";
 @import "./assets/styles/fonts.scss";
 @import "./assets/styles/layout.scss";
-@import "./assets/styles/reset.scss";
+@import "./assets/styles/components/toggle-switch.scss";
+
 
 $body-fonts: 'Open Sans', sans-serif;
 

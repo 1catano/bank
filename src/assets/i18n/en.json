@@ -5,6 +5,11 @@
         "logout": "Safe logout",
         "profile": "Profile"
     },
+    "info-bar": {
+        "head-label": "Show others products",
+        "your-finance": "How do your finances look?",
+        "financial-savings-msg": "In savings products you have:"
+    },
     "sidebar": {
         "options": {
             "your_products": "YOUR PRODUCTS",

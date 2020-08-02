@@ -5,6 +5,7 @@
     display: flex;
     position: absolute;
     top: $header-height;
+    z-index: 1;
     @include all-desktop {
         position: relative;
         top: 0;

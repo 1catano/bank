@@ -8,9 +8,11 @@
     flex-direction: row;
     height: $header-height;
     padding: 0 #{$space-small};
+    justify-content: space-evenly;
 
     @include all-desktop {
         box-shadow: none;
+        justify-content: space-between;
     }
 
     @include all-desktop {
@@ -33,7 +35,112 @@
     }
 
     &__username {
+        color: #{$abbey};
         font-size: $text-medium-3;
         font-weight: bold;
+    }
+
+    &__profile-menu-container {
+        background-color: white;
+        box-shadow: 0px 2px 20px -4px rgba(97, 97, 97, 1);
+        padding: $space-medium-1;
+        position: absolute;
+        right: 0;
+        top: $header-height;
+        width: 140px;
+
+        @include all-desktop {
+            display: none;
+        }
+    }
+}
+
+.bank-header-options {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: #{$space-small};
+    width: 24%;
+
+    @include all-desktop {
+        flex-direction: row;
+        margin-right: #{$space-big-1};
+        width: 40%;
+    }
+
+    &__label {
+        color: #{$abbey};
+        display: none;
+        font-size: #{$text-medium-1};
+
+        &--show {
+            cursor: pointer;
+            display: block;
+            margin-right: #{$space-small};
+        }
+
+        @include all-desktop {
+            cursor: pointer;
+            display: block;
+            margin-right: #{$space-medium-1};
+        }
+    }
+
+    &__opt {
+        border-radius: 8px;
+        box-shadow: 0px 2px 20px -4px rgba(97, 97, 97, 1);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        height: 55px;
+        justify-content: center;
+        padding: 4px;
+        width: 55px;
+
+        &--only-desktop {
+            display: none;
+            @include all-desktop {
+                display: flex;
+            }
+        }
+
+        &--in-menu {
+            align-items: center;
+            border-radius: inherit;
+            box-shadow: none;
+            flex-direction: row;
+            padding-right: #{$space-medium-1};
+            width: 100%;
+        }
+
+        &__list-item {
+            &:not(:last-child) {
+                border-bottom: 1px solid #{$abbey};;
+            }
+        }
+
+        @include all-desktop {
+            align-items: center;
+            border-radius: inherit;
+            box-shadow: none;
+            flex-direction: row;
+            padding-right: #{$space-medium-1};
+            width: 112px;
+            &:not(:last-child) {
+                border-right: 1px solid #{$abbey};;
+                margin-right: #{$space-medium-1};
+            }
+        }
+    }
+
+    &__opt-icon {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        &__chield {
+            @include all-desktop {
+                display: none;
+            }
+        }
     }
 }

@@ -1,5 +1,5 @@
 export interface IProduct {
-    accountInformation: IAccountInformation;
+    accountInformation?: IAccountInformation;
 }
 
 export interface IAccountInformation {

@@ -11,6 +11,50 @@ export class HomeComponent implements OnInit {
 
   public showSidebar: boolean;
   public isMobile = true;
+  public products = [
+    {
+      accountInformation: {
+        accountIdentifier: '1315000180',
+        productType: 'CREDIT',
+        bank: 'BANCO_2'
+      }
+    },
+    {
+      accountInformation: {
+        accountIdentifier: '1315000181',
+        productType: 'CREDIT',
+        bank: 'BANCO_2'
+      }
+    },
+    {
+      accountInformation: {
+        accountIdentifier: '1315000182',
+        productType: 'CREDIT',
+        bank: 'BANCO_2'
+      }
+    },
+    {
+      accountInformation: {
+        accountIdentifier: '1315000183',
+        productType: 'CREDIT',
+        bank: 'BANCO_2'
+      }
+    },
+    {
+      accountInformation: {
+        accountIdentifier: '1315000184',
+        productType: 'CREDIT',
+        bank: 'BANCO_2'
+      }
+    },
+    {
+      accountInformation: {
+        accountIdentifier: '1315000185',
+        productType: 'CREDIT',
+        bank: 'BANCO_2'
+      }
+    }
+  ];
 
   constructor(private deviceService: DeviceDetectorService) { }
 

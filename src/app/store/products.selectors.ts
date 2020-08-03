@@ -18,3 +18,8 @@ export const filterdProducts = createSelector(
     productsSelector,
     (state: ProductState) => state.filtereProducts
 );
+
+export const selectedFilter = createSelector(
+    productsSelector,
+    (state: ProductState) => state.filter
+);

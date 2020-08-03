@@ -6,6 +6,7 @@ export enum EProductActions {
     getProducts = '[Products actions] Get product list from bank api',
     getProductsSuccess = '[Products actions] Get product list from bank api successfully',
     getProductsFailure = '[Products actions] Get product list from bank api failure',
+    filterByBank = '[Products actions] Filter products by bank name',
 }
 
 export class GetProducts implements Action {
@@ -23,4 +24,9 @@ export class GetProductsFailure implements Action {
     constructor(public payload: string) { }
 }
 
-export type ProductActions = GetProducts | GetProductsSuccess | GetProductsFailure;
+export class FilterProductsByBank implements Action {
+    public readonly type = EProductActions.filterByBank;
+    constructor(public payload: { products?: IProduct[], filter: string }) { }
+}
+
+export type ProductActions = GetProducts | GetProductsSuccess | GetProductsFailure | FilterProductsByBank;

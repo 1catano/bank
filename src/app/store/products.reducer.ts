@@ -2,7 +2,6 @@ import { ProductState } from '../shared/contracts/products.state';
 import { ProductActions, EProductActions } from './products.actions';
 import { IProduct } from '../shared/contracts/product';
 import { Banks } from '../shared/contracts/banks.enum';
-import { productList } from './products.selectors';
 
 export const initialState: ProductState = {
     isLoading: false,

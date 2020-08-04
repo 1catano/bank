@@ -1,4 +1,17 @@
 {
+    "card": {
+        "view-detail": "Ver detalle",
+        "saving_account": "Cuenta de Ahorros",
+        "checking_account": "Cuenta Corriente",
+        "cdt": "CDT",
+        "credit-card": "Tarjeta de Crédito",
+        "credit1": "Credito libre Destino"
+    },
+    "footer": {
+        "title": "¿No encuentras lo que estás buscando?",
+        "description": "Seguimos trabajando para tener todo lo que necesitas en esta nueva esperiencia. Mientras tanto, puedes buscar lo que no encuentres en la versión anterior.",
+        "text-buttom":"Ir a la versión anterior"
+    },
     "header": {
         "alerts": "Alertas",
         "greeting": "Buenos días, {{name}}",

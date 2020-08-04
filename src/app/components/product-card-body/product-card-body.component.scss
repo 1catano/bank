@@ -1,0 +1,30 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixins.scss";
+
+.bank-product-card-body {
+    width: 60%;
+    &__account {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $space-medium-2;
+    }
+    &__type {
+        margin-bottom: $space-small;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    &__number-account {
+        font-size: $text-small;
+    }
+
+    &__amount-label {
+        font-size: $text-small;
+        margin-bottom: $space-extra-small;
+    }
+
+    &__amount {
+        font-size: 22px;
+        font-weight: bold;
+    }
+}

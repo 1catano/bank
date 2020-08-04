@@ -1,4 +1,17 @@
 {
+    "card": {
+        "view-detail": "View detail",
+        "saving_account": "Savings Account",
+        "checking_account": "Checking Account",
+        "cdt": "CDT",
+        "credit-card": "Credit Card",
+        "credit1": "Credit"
+    },
+    "footer": {
+        "title": "You can not find what you're looking for?",
+        "description": "We continue working to have everything you need in this new experience. In the meantime, you can search for what you can't find in the previous version.",
+        "text-buttom":"Go to the previous version"
+    },
     "header": {
         "alerts": "Alerts",
         "greeting": "Good morning, {{name}}",

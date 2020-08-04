@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -28,6 +29,7 @@ const effects = [ProductsEffects];
   ],
   imports: [
     BrowserModule,
+    SharedModule,
     ComponentsModule,
     AppRoutingModule,
     StoreModule.forRoot({ products: productsReducer }),

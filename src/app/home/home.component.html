@@ -7,5 +7,16 @@
         </app-info-bar>
         <app-product-list [products]="products$ | async">
         </app-product-list>
+
+        <div class="bank-home-message">
+            <div class="bank-home-message__container">
+                <h4 class="bank-home-message__title">{{ "footer.title" | translate }}</h4>
+                <p class="bank-home-message__description"> {{ "footer.description" | translate }} </p>
+            </div>
+            <button class="bank-home-message__action">{{ "footer.text-buttom" | translate }}</button>
+        </div>
+        <div class="bank-home-footer">
+            <div class="bank-home-footer__copyright">©Epika Bank</div>
+        </div>
     </div>
 </section>

@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { filterdProducts, isLoading } from '../store/products.selectors';
 import { GetProducts } from '../store/products.actions';
 import { IAppState } from '../shared/contracts/app.state';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit {
   products$: Observable<IProduct[]>;
   isLoading$: Observable<boolean>;
 
-  constructor(private deviceService: DeviceDetectorService, private store: Store<IAppState>) {
+  constructor(translate: TranslateService, private deviceService: DeviceDetectorService, private store: Store<IAppState>) {
     this.products$ = this.store.pipe(select(filterdProducts));
     this.isLoading$ = this.store.pipe(select(isLoading));
   }

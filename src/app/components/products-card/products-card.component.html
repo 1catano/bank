@@ -1,5 +1,14 @@
 <div class="bank-product-card">
-    <label>{{ product?.accountInformation?.accountIdentifier }}</label>
-    <br />
-    <label>{{ product?.accountInformation?.bank }}</label>
+    <div class="bank-product-card__header">
+        <div class="bank-product-card__header-icon">
+            <fa-icon [icon]="headerIcon" size="2x"></fa-icon>
+        </div>
+        <div class="bank-product-card__header-detail-link">
+            <a class="bank-product-card__header-detail-link__text">
+                {{ "card.view-detail" | translate }}
+            </a>
+        </div>
+    </div>
+    <app-product-card-body [productType]="product.typeAccount" [number]="product.id"></app-product-card-body>
+    <app-product-card-footer></app-product-card-footer>
 </div>
